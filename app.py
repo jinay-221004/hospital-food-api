@@ -1,4 +1,4 @@
-import pyodbc
+# import pyodbc
 from flask import Flask, render_template, request
 import pyodbc
 import os
@@ -29,4 +29,5 @@ def add():
 
 if __name__ == "__main__":
     app.run()
+
 

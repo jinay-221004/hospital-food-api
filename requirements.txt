@@ -3,4 +3,3 @@ gunicorn
 numpy
 pandas
 scikit-learn
-pyodbc==4.0.39

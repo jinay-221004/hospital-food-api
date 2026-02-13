@@ -1,59 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hospital Food System</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Hospital Food Order</title>
 </head>
-<body class="bg-light">
+<body>
+    <h2>Hospital Food Order Form</h2>
 
-<div class="container mt-5">
+    <form action="/add" method="post">
+        <label>Patient Name:</label><br>
+        <input type="text" name="name" required><br><br>
 
-    <h2 class="text-center mb-4">Hospital Food Order System</h2>
+        <label>Food Item:</label><br>
+        <input type="text" name="food" required><br><br>
 
-    <div class="card mb-4">
-        <div class="card-header bg-primary text-white">
-            Patients List
-        </div>
-        <div class="card-body">
-            <ul class="list-group">
-                {% for patient in patients %}
-                <li class="list-group-item">
-                    ID: {{ patient[0] }} |
-                    Name: {{ patient[1] }} |
-                    Room: {{ patient[2] }} |
-                    Diet: {{ patient[3] }}
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-header bg-success text-white">
-            Place Order
-        </div>
-        <div class="card-body">
-            <form method="POST" action="/placeorder">
-
-                <div class="mb-3">
-                    <label class="form-label">Patient ID</label>
-                    <input type="number" name="patient_id" class="form-control" required>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Menu ID</label>
-                    <input type="number" name="menu_id" class="form-control" required>
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                    Place Order
-                </button>
-
-            </form>
-        </div>
-    </div>
-
-</div>
+        <button type="submit">Submit</button>
+    </form>
 
 </body>
 </html>
